@@ -1,0 +1,155 @@
+:root {
+    --purple-deep: #480ca8;
+    --purple-mid: #7209b7;
+    --purple-light: #c48eff;
+    --white-smoke: #f5f5f5;
+    --text-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--purple-deep), var(--purple-mid));
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 30px;
+    /* Ajuste para popup de extensão: limita o tamanho do corpo */
+    width: 400px; 
+    min-height: 450px; 
+}
+
+.agenda-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--white-smoke);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-weight: 600;
+    color: var(--purple-deep);
+}
+
+header p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.nova-anotacao-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.nova-anotacao-form input,
+.nova-anotacao-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.nova-anotacao-form input:focus,
+.nova-anotacao-form textarea:focus {
+    outline: none;
+    border-color: var(--purple-mid);
+    box-shadow: 0 0 8px rgba(114, 9, 183, 0.2);
+}
+
+.nova-anotacao-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#btn-adicionar {
+    background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#btn-adicionar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(114, 9, 183, 0.3);
+}
+
+.lista-anotacoes h2 {
+    color: var(--purple-deep);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.anotacao {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    margin-bottom: 15px;
+}
+
+.anotacao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.anotacao-header h3 {
+    font-weight: 600;
+    color: var(--purple-mid);
+}
+
+.anotacao-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.btn-action:hover {
+    color: var(--purple-deep);
+}
+
+.anotacao p {
+    color: #555;
+    line-height: 1.6;
+}

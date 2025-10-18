@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Anotações</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="agenda-container">
+        <header>
+            <h1>Minhas Anotações</h1>
+            <p>Organize suas ideias e tarefas</p>
+        </header>
+
+        <section class="nova-anotacao-form">
+            <input type="text" id="titulo-anotacao" placeholder="Título da sua anotação...">
+            <textarea id="corpo-anotacao" placeholder="Escreva sua anotação aqui..."></textarea>
+            <button id="btn-adicionar">
+                <i class="fas fa-plus-circle"></i> Adicionar Anotação
+            </button>
+        </section>
+
+        <section class="lista-anotacoes">
+            <h2>Anotações Salvas</h2>
+            <div id="anotacoes-list-target">
+                </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
